@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>USDOT AI - AI Integration Services for Trucking Companies</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+                line-height: 1.6;
+                color: #2c3e50;
+                background-color: #ffffff;
+                font-feature-settings: 'liga' 1, 'kern' 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            /* Header */
+            header {
+                background: #ffffff;
+                padding: 1rem 0;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #2c3e50;
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                gap: 2rem;
+            }
+
+            .nav-links a {
+                color: #2c3e50;
+                text-decoration: none;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .nav-links a:hover {
+                color: #3182ce;
+            }
+
+            .contact-info {
+                font-size: 0.9rem;
+                text-align: right;
+                color: #64748b;
+            }
+
+            /* Hero Section */
+            .hero {
+                position: relative;
+                min-height: 100vh;
+                overflow: hidden;
+            }
+
+            .hero-video {
+                width: 100%;
+                height: 100vh;
+            }
+
+            .hero-video video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* CTA Button */
+            .cta-button {
+                background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+                color: white;
+                padding: 16px 32px;
+                border: none;
+                border-radius: 6px;
+                font-size: 1rem;
+                font-weight: 400;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+            }
+
+            .cta-button:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+            }
+
+            /* Services Section */
+            .services {
+                padding: 80px 0;
+                background: #ffffff;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                font-weight: 300;
+                margin-bottom: 2rem;
+                color: #2c3e50;
+                text-align: center;
+            }
+
+            .section-subtitle {
+                font-size: 1.2rem;
+                color: #64748b;
+                text-align: center;
+                max-width: 900px;
+                margin: 0 auto 3rem;
+                line-height: 1.7;
+            }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .service-card {
+                background: #ffffff;
+                padding: 2rem;
+                border-radius: 8px;
+                border: 1px solid #e2e8f0;
+                transition: box-shadow 0.3s ease;
+            }
+
+            .service-card:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            }
+
+            .service-card h3 {
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+                color: #2c3e50;
+            }
+
+            .service-card p {
+                color: #64748b;
+                line-height: 1.7;
+            }
+
+            /* Why Choose Section */
+            .why-choose {
+                padding: 80px 0;
+                background: #f8fafc;
+            }
+
+            .features-list {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: left;
+            }
+
+            .features-list ul {
+                list-style: none;
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .features-list li {
+                margin-bottom: 0.8rem;
+                padding-left: 1.5rem;
+                position: relative;
+                color: #64748b;
+            }
+
+            .features-list li:before {
+                content: "✓";
+                color: #10b981;
+                font-weight: bold;
+                position: absolute;
+                left: 0;
+            }
+
+            /* Industries Section */
+            .industries {
+                padding: 80px 0;
+                background: #ffffff;
+            }
+
+            .industries-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .industry-item {
+                background: #f8fafc;
+                padding: 1.5rem;
+                border-radius: 8px;
+                text-align: center;
+                border: 1px solid #e2e8f0;
+            }
+
+            .industry-item h4 {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: #2c3e50;
+            }
+
+            /* Testimonials */
+            .testimonials {
+                padding: 80px 0;
+                background: #f8fafc;
+            }
+
+            .testimonial-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .testimonial {
+                background: #ffffff;
+                padding: 2rem;
+                border-radius: 8px;
+                border: 1px solid #e2e8f0;
+            }
+
+            .testimonial-text {
+                font-style: italic;
+                color: #64748b;
+                margin-bottom: 1rem;
+                line-height: 1.7;
+            }
+
+            .testimonial-author {
+                font-weight: 500;
+                color: #2c3e50;
+            }
+
+            /* FAQ Section */
+            .faq {
+                padding: 80px 0;
+                background: #ffffff;
+            }
+
+            .faq-list {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .faq-item {
+                margin-bottom: 2rem;
+                border-bottom: 1px solid #e2e8f0;
+                padding-bottom: 1.5rem;
+            }
+
+            .faq-question {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: #2c3e50;
+                margin-bottom: 0.8rem;
+            }
+
+            .faq-answer {
+                color: #64748b;
+                line-height: 1.7;
+            }
+
+            /* CTA Section */
+            .final-cta {
+                background: linear-gradient(135deg, #1e3a5f 0%, #3182ce 100%);
+                color: white;
+                padding: 80px 0;
+                text-align: center;
+            }
+
+            .final-cta h2 {
+                font-size: 2.5rem;
+                font-weight: 300;
+                margin-bottom: 1.5rem;
+            }
+
+            .final-cta p {
+                font-size: 1.2rem;
+                margin-bottom: 2.5rem;
+                opacity: 0.9;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 2rem;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contact-item {
+                text-align: center;
+            }
+
+            .contact-label {
+                font-size: 1.1rem;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+            }
+
+            .contact-value {
+                font-size: 1.3rem;
+                font-weight: 400;
+            }
+
+            /* Footer */
+            footer {
+                background: #1e3a5f;
+                color: white;
+                padding: 3rem 0;
+                text-align: center;
+            }
+
+            .footer-content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            .footer-section p,
+            .footer-section a {
+                color: #cbd5e0;
+                text-decoration: none;
+                line-height: 1.6;
+            }
+
+            .footer-section a:hover {
+                color: #8b5cf6;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                }
+
+                .contact-info {
+                    font-size: 0.8rem;
+                }
+
+                .services-grid,
+                .testimonial-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .section-title {
+                    font-size: 2rem;
+                }
+
+                .final-cta h2 {
+                    font-size: 2rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="container">
+                <div class="logo">
+                    USDOT AI
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-choose">Why Choose Us</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="contact-info">
+                    <div>📞 (405) 633-3363</div>
+                    <div>✉️ carsocybernetics@gmail.com</div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-video">
+                <iframe width="560" height="315" src="images/720.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">How Our Private AI Solutions Transform Trucking Operations</h2>
+                <p class="section-subtitle">From automated load booking to ELD optimization, our local AI models work
+                    24/7
+                    to maximize profits while keeping your sensitive data completely private. No cloud dependencies, no
+                    data
+                    sharing, just results.</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>24/7 Load Board Automation</h3>
+                        <p>AI agents continuously monitor DAT and other load boards while you sleep, automatically
+                            identifying profitable loads and submitting competitive bids within seconds of posting. Keep
+                            your trucks pre-planned and never miss profitable opportunities again.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Private Local AI Models</h3>
+                        <p>Deploy AI solutions on your own servers to maintain complete data privacy. Your sensitive
+                            freight
+                            information, routes, and operational data never leaves your premises while still leveraging
+                            cutting-edge AI capabilities.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>ELD & Route Optimization</h3>
+                        <p>Intelligent route planning that factors in HOS regulations, real-time traffic, fuel costs,
+                            and
+                            delivery windows. Automatically optimize driver schedules and routes while ensuring DOT
+                            compliance and maximizing driving efficiency.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Dispatcher Labor Reduction</h3>
+                        <p>Automate routine dispatch tasks including load matching, driver communication, and schedule
+                            coordination. Reduce dispatcher workload by 60-80% while improving response times and
+                            operational efficiency.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Owner-Operator AI Assistants</h3>
+                        <p>Specialized AI tools for independent drivers including automated load searching, profit
+                            analysis,
+                            and business management. Work smarter with AI that handles the busywork so you can focus on
+                            driving.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Fleet Management Integration</h3>
+                        <p>Seamlessly integrate with existing TMS, ELD systems, and fleet management software. Our AI
+                            enhances your current operations without disrupting established workflows or requiring
+                            system
+                            replacements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose" id="why-choose">
+            <div class="container">
+                <h2 class="section-title">Why Choose Local AI Models Over Cloud-Based Solutions</h2>
+                <p class="section-subtitle">Complete data privacy, 24/7 automation, and trucking-specific expertise</p>
+
+                <div class="features-list">
+                    <ul>
+                        <li>100% private data - your freight information never leaves your premises</li>
+                        <li>24/7 load board monitoring and automated bidding while you sleep</li>
+                        <li>Instant response times - no internet dependency for critical operations</li>
+                        <li>Specialized expertise in DAT, Truckstop.com, and other load boards</li>
+                        <li>Deep integration with ELD systems (PeopleNet, Omnitracs, KeepTruckin)</li>
+                        <li>Automated route optimization considering HOS regulations</li>
+                        <li>Proven 60-80% reduction in dispatcher workload</li>
+                        <li>Owner-operator focused tools for independent drivers</li>
+                        <li>ROI typically achieved within 2-4 months</li>
+                        <li>No monthly cloud fees - own your AI infrastructure</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">In Our Customers' Own Words...</h2>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-text">"The load board AI agent books 3-4 loads per night while I sleep.
+                            It
+                            bids on DAT loads within 30 seconds of posting and has increased my revenue 40% by catching
+                            loads I would've missed. My data stays completely private on my own server."</div>
+                        <div class="testimonial-author">— Mike Thompson, Owner-Operator</div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-text">"Our dispatcher workload dropped 70% after implementing the AI
+                            system.
+                            Routes are optimized automatically, ELD compliance is seamless, and drivers get their
+                            schedules
+                            instantly. We went from 3 dispatchers to 1 while handling more trucks."</div>
+                        <div class="testimonial-author">— Sarah Rodriguez, Fleet Manager</div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-text">"Having local AI models means our competitive freight data never
+                            goes
+                            to the cloud. The system saved us $85,000 in fuel costs last year through better route
+                            planning
+                            while keeping all our operational intelligence private."</div>
+                        <div class="testimonial-author">— James Wilson, Operations Director</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="industries" id="industries">
+            <div class="container">
+                <h2 class="section-title">Common Trucking Sectors We've Served</h2>
+                <p class="section-subtitle">Some of the trucking and logistics sectors we've served with our AI
+                    Integration
+                    Services</p>
+
+                <div class="industries-grid">
+                    <div class="industry-item">
+                        <h4>Owner-Operators</h4>
+                    </div>
+                    <div class="industry-item">
+                        <h4>Small Fleet Operations</h4>
+                    </div>
+                    <div class="industry-item">
+                        <h4>Regional Carriers</h4>
+                    </div>
+                    <div class="industry-item">
+                        <h4>Long-Haul Trucking</h4>
+                    </div>
+                    <div class="industry-item">
+                        <h4>Specialized Transport</h4>
+                    </div>
+                    <div class="industry-item">
+                        <h4>Freight Brokers</h4>
+                    </div>
+                    <div class="industry-item">
+                        <h4>Logistics Companies</h4>
+                    </div>
+                    <div class="industry-item">
+                        <h4>3PL Providers</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about our AI & Generative AI Integration Services for
+                    trucking
+                    companies</p>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">How quickly can AI integration improve our trucking operations?</div>
+                        <div class="faq-answer">Most trucking companies see initial improvements within 30-60 days of
+                            implementation. Load booking automation and route optimization typically show immediate ROI,
+                            while driver communication systems and predictive maintenance may take 2-3 months to show
+                            full
+                            benefits.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Will AI integration work with our existing fleet management system?
+                        </div>
+                        <div class="faq-answer">Yes, we specialize in integrating AI solutions with popular trucking
+                            software including McLeod, TMW, PeopleNet, Omnitracs, and other TMS platforms. Our APIs
+                            ensure
+                            seamless data flow between systems.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How much does AI integration cost for a trucking company?</div>
+                        <div class="faq-answer">Costs vary based on fleet size and complexity. Small operations (1-10
+                            trucks) typically start at $5,000-15,000, while larger fleets may invest $25,000-100,000+
+                            for
+                            comprehensive AI integration. Most clients see full ROI within 6-18 months.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can AI help with DOT compliance and safety regulations?</div>
+                        <div class="faq-answer">Absolutely. Our AI solutions can monitor HOS violations, predict
+                            maintenance
+                            needs to prevent roadside inspections, track driver behavior for safety scoring, and
+                            automate
+                            compliance reporting to reduce administrative burden.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do you provide training for our drivers and dispatchers?</div>
+                        <div class="faq-answer">Yes, we include comprehensive training for all users as part of our
+                            integration service. This includes driver apps, dispatcher tools, and management dashboards.
+                            We
+                            also provide ongoing support to ensure successful adoption.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" id="contact">
+            <div class="container">
+                <h2>Transform Your Trucking Business with Our AI Integration Services</h2>
+                <p>Turn your AI vision into reality with Carso Cybernetics. Our expert AI integration services help you
+                    streamline fleet operations, optimize routes, and drive profitability. Schedule a consultation today
+                    to
+                    explore how we can accelerate your trucking success—we'll reach out within 24-48 hours.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-label">📞 Call Us</div>
+                        <div class="contact-value">(405) 633-3363</div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-label">✉️ Email Us</div>
+                        <div class="contact-value">carsocybernetics@gmail.com</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="tel:4056333363" class="cta-button" style="margin-right: 1rem;">Call Now</a>
+                    <a href="mailto:carsocybernetics@gmail.com" class="cta-button">Send Email</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Carso Cybernetics</h3>
+                        <p>Leading provider of AI integration services for trucking companies. Helping fleets leverage
+                            the
+                            power of artificial intelligence for competitive advantage.</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Services</h3>
+                        <p><a href="#services">AI Opportunity Selection</a></p>
+                        <p><a href="#services">Custom AI Development</a></p>
+                        <p><a href="#services">Fleet Management Integration</a></p>
+                        <p><a href="#services">Load Board Automation</a></p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Contact Info</h3>
+                        <p>Phone: (405) 633-3363</p>
+                        <p>Email: carsocybernetics@gmail.com</p>
+                        <p>Response Time: Within 24 hours</p>
+                    </div>
+                </div>
+
+                <div style="border-top: 1px solid #3182ce; padding-top: 2rem; text-align: center; color: #cbd5e0;">
+                    <p>&copy; 2025 Carso Cybernetics. All rights reserved. | Professional AI Integration Services for
+                        Trucking</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    </html>
+
+</body>
+
+</html>

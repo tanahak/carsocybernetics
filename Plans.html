@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Business Plan | Carso Cybernetics - AI for Truckers, By a Trucker</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                font-weight: 300;
+                line-height: 1.7;
+                color: #2c3e50;
+                background: #f8fafc;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .hero {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 120px 0;
+                text-align: center;
+                position: relative;
+            }
+
+            .logo {
+                width: 120px;
+                height: 80px;
+                margin: 0 auto 30px;
+                background: white;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+            }
+
+            .logo img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                padding: 10px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+                font-weight: 300;
+                letter-spacing: -0.5px;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+                margin-bottom: 30px;
+                color: rgba(255, 255, 255, 0.9);
+                font-weight: 300;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+                color: rgba(255, 255, 255, 0.8);
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .main-content {
+                background: white;
+                margin: -80px auto 0;
+                border-radius: 12px;
+                box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+                overflow: hidden;
+                max-width: 1000px;
+            }
+
+            .section {
+                padding: 80px 60px;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            .section:last-child {
+                border-bottom: none;
+            }
+
+            .section h2 {
+                font-size: 2.2rem;
+                color: #1e293b;
+                margin-bottom: 40px;
+                text-align: center;
+                font-weight: 300;
+                letter-spacing: -0.5px;
+            }
+
+            .section h3 {
+                font-size: 1.4rem;
+                color: #475569;
+                margin: 40px 0 20px;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 1.05rem;
+                color: #64748b;
+                line-height: 1.7;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                color: #64748b;
+                font-size: 1.05rem;
+            }
+
+            .two-column {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                margin: 30px 0;
+            }
+
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+                margin: 40px 0;
+            }
+
+            .stat-card {
+                background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                color: #1e293b;
+                padding: 40px 30px;
+                border-radius: 12px;
+                text-align: center;
+                box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+                border: 1px solid #e2e8f0;
+            }
+
+            .stat-card .number {
+                font-size: 2.5rem;
+                font-weight: 300;
+                display: block;
+                margin-bottom: 10px;
+                color: #667eea;
+            }
+
+            .stat-card .label {
+                font-size: 0.95rem;
+                color: #64748b;
+                font-weight: 400;
+            }
+
+            .timeline {
+                position: relative;
+                padding-left: 30px;
+            }
+
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: #e2e8f0;
+            }
+
+            .timeline-item {
+                position: relative;
+                margin-bottom: 40px;
+                padding-left: 40px;
+            }
+
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -36px;
+                top: 5px;
+                width: 8px;
+                height: 8px;
+                background: #667eea;
+                border-radius: 50%;
+                border: 3px solid white;
+                box-shadow: 0 0 0 3px #e2e8f0;
+            }
+
+            .timeline-item h4 {
+                color: #1e293b;
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+                font-weight: 400;
+            }
+
+            .highlight-box {
+                background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+                padding: 40px;
+                border-radius: 12px;
+                margin: 40px 0;
+                border-left: 4px solid #667eea;
+                border: 1px solid #e0f2fe;
+            }
+
+            .highlight-box h4 {
+                color: #1e293b;
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .founder-story {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 60px 50px;
+                margin: 50px 0;
+                border-radius: 12px;
+                box-shadow: 0 4px 25px rgba(102, 126, 234, 0.15);
+            }
+
+            .founder-story h3 {
+                color: white;
+                text-align: center;
+                margin-bottom: 30px;
+                font-weight: 300;
+            }
+
+            .founder-story p {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .cta-section {
+                background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+                color: white;
+                text-align: center;
+                padding: 100px 60px;
+            }
+
+            .cta-section h2 {
+                color: white;
+                margin-bottom: 25px;
+                font-weight: 300;
+            }
+
+            .cta-button {
+                display: inline-block;
+                background: #667eea;
+                color: white;
+                padding: 16px 32px;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: 400;
+                font-size: 1rem;
+                margin: 15px 10px;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            }
+
+            .cta-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+                background: #5a67d8;
+            }
+
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                .hero .subtitle {
+                    font-size: 1.2rem;
+                }
+
+                .two-column {
+                    grid-template-columns: 1fr;
+                }
+
+                .section {
+                    padding: 60px 40px;
+                }
+
+                .cta-section {
+                    padding: 80px 40px;
+                }
+
+                .timeline {
+                    padding-left: 20px;
+                }
+
+                .timeline-item {
+                    padding-left: 30px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="background: red; color: white; padding: 10px; text-align: center;">TEST - IF YOU SEE THIS THE FILE
+            IS
+            WORKING</div>
+        <div class="hero">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://i.imgur.com/XSmrMTK.png" alt="Carso Cybernetics Logo">
+                </div>
+                <h1>Our Business Plan</h1>
+                <p class="subtitle">Democratizing AI for America's Small Trucking Companies</p>
+                <p class="tagline">Built by truckers, for truckers</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="main-content">
+                <div class="section"
+                    style="background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%); color: white; text-align: center; border-radius: 12px; margin: 20px 0;">
+                    <h2 style="color: white; margin-bottom: 20px;">🚨 LIMITED TIME: Core Agent Initiative</h2>
+                    <h3 style="color: white; font-size: 1.8rem; margin-bottom: 25px;">Special $9,999 Research
+                        Partnership
+                    </h3>
+                    <p style="color: rgba(255,255,255,0.95); font-size: 1.2rem; margin-bottom: 25px;">We're selecting 5
+                        pioneering trucking companies to join our Core Agent Initiative research program. Get a complete
+                        $65,000 AI system for just $9,999 in exchange for participating in anonymous research and
+                        training
+                        for 12 months.</p>
+                    <div class="two-column" style="margin: 30px 0; text-align: left;">
+                        <div>
+                            <h4 style="color: white; margin-bottom: 15px;">✅ What You Get:</h4>
+                            <ul style="color: rgba(255,255,255,0.9); line-height: 1.8;">
+                                <li>Complete $65,000 AI system for $9,999</li>
+                                <li>Full installation and training included</li>
+                                <li>Priority support and updates</li>
+                                <li>Direct input on feature development</li>
+                                <li>Free lifetime updates after program ends</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: white; margin-bottom: 15px;">📋 Requirements:</h4>
+                            <ul style="color: rgba(255,255,255,0.9); line-height: 1.8;">
+                                <li>10-50 truck operation (sweet spot for research)</li>
+                                <li>Commit to 12-month research participation</li>
+                                <li>Provide anonymous operational feedback</li>
+                                <li>Allow system performance data collection</li>
+                                <li>Subject to Carso Cybernetics approval</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 8px; margin: 25px 0;">
+                        <p style="font-size: 1.1rem; margin-bottom: 15px;"><strong>⏰ Only 5 Spots Available - 3 Already
+                                Reserved</strong></p>
+                        <p style="font-size: 1rem;">This program closes when we reach 5 participants or December 31,
+                            2025,
+                            whichever comes first.</p>
+                    </div>
+                    <a href="#apply" class="cta-button"
+                        style="background: white; color: #ff6b6b; font-size: 1.2rem; padding: 18px 35px; margin: 10px;">Apply
+                        for $9,999 Research Program</a>
+                </div>
+                <div class="section">
+                    <h2>The Survival Crisis Facing Small Trucking</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>🚛 The Extinction Event</h3>
+                            <p>Small trucking companies are disappearing at an alarming rate. Large carriers like Amazon
+                                Logistics, UPS, and FedEx are using AI to optimize routes, predict demand, automate
+                                bidding,
+                                and slash operational costs by 15-30%. They can afford million-dollar AI
+                                implementations.
+                            </p>
+                            <p>Meanwhile, small operators still use spreadsheets, make routing decisions by gut feeling,
+                                and
+                                spend hours manually searching load boards. They're losing contracts to carriers who can
+                                bid
+                                faster, route smarter, and operate more efficiently.</p>
+                            <p><strong>The result? A death spiral:</strong> Lower margins → less investment → further
+                                behind
+                                on technology → even lower margins → bankruptcy.</p>
+                        </div>
+                        <div>
+                            <h3>🔒 The Data Trap</h3>
+                            <p>Desperate small operators try cloud-based AI solutions, unknowingly feeding their
+                                competitive
+                                intelligence to systems that train on everyone's data. Their bid strategies, profitable
+                                routes, customer relationships, and operational secrets become training data for AI
+                                models
+                                their competitors can access.</p>
+                            <p><strong>It's worse than having no AI - it's actively helping competitors crush
+                                    them.</strong>
+                            </p>
+                            <ul style="margin: 15px 0; padding-left: 20px;">
+                                <li>Route optimization data shared across the platform</li>
+                                <li>Bid patterns exposed to market analytics</li>
+                                <li>Customer preferences mined for competitor advantage</li>
+                                <li>Operational weaknesses identified and exploited</li>
+                            </ul>
+                            <p>Small truckers need AI to compete, but using it through cloud platforms is business
+                                suicide.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>Without Private AI, Small Trucking Companies Have 18 Months to Live</h4>
+                        <p>Industry analysts predict that companies without AI optimization will be priced out of
+                            profitable
+                            routes by 2027. The efficiency gap is already unbridgeable through human effort alone. Small
+                            operators must either adopt private AI systems or sell their trucks to companies that have.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Our Solution</h2>
+                    <div class="highlight-box">
+                        <h4>Complete AI System: $65,000 - Own Your Equipment</h4>
+                        <p>We provide a complete turnkey AI system with dedicated enterprise-grade hardware installed at
+                            your location. Custom-trained on FMCSA regulations and your operational data while
+                            maintaining
+                            complete on-premises privacy. Includes installation, training, and free lifetime updates.
+                        </p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="number">$65K</span>
+                            <span class="label">Complete System vs. $50K+ Custom AI</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="number">$0</span>
+                            <span class="label">Monthly Fees Forever</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="number">100%</span>
+                            <span class="label">Data Privacy Guaranteed</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="number">24/7</span>
+                            <span class="label">Automated Efficiency</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="number">$5.85M</span>
+                            <span class="label">Year 1 Revenue Target</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="founder-story">
+                    <h3>Why I'm Fighting for Small Trucking's Survival</h3>
+                    <p>"After a decade behind the wheel and building an 11,500-member trucker community as @cdlkaren, I
+                        watched small operators get systematically crushed by technology they couldn't afford or access
+                        safely. Large carriers were using AI to optimize everything while small companies were stuck
+                        with
+                        spreadsheets and gut instincts."</p>
+                    <p style="margin-top: 20px;">"The breaking point came when I realized that cloud-based AI wasn't
+                        just
+                        expensive for small truckers—it was actively dangerous. These platforms train on everyone's
+                        data,
+                        meaning your bid strategies, route optimizations, and operational secrets become training data
+                        that
+                        helps your competitors beat you."</p>
+                    <p style="margin-top: 20px; font-style: italic;">"I learned AI development not to get rich, but to
+                        prevent an extinction event. Small trucking companies have maybe 18 months before the efficiency
+                        gap
+                        becomes impossible to close. This isn't about innovation—it's about survival. And survival
+                        requires
+                        AI you own, not AI that owns you."</p>
+                </div>
+
+                <div class="section">
+                    <h2>Business Model & Projections</h2>
+                    <div class="two-column">
+                        <div>
+                            <h3>Revenue Structure</h3>
+                            <ul style="margin: 15px 0; padding-left: 20px; line-height: 2;">
+                                <li><strong>$65,000</strong> complete system purchase</li>
+                                <li><strong>On-premises installation</strong> included</li>
+                                <li><strong>Custom model development</strong> included</li>
+                                <li><strong>Free lifetime updates</strong> included</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>9-Month Targets</h3>
+                            <ul style="margin: 15px 0; padding-left: 20px; line-height: 2;">
+                                <li><strong>90 systems</strong> deployed</li>
+                                <li><strong>$5.85M</strong> in total revenue</li>
+                                <li><strong>Complete customer ownership</strong></li>
+                                <li><strong>Zero ongoing fees</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Implementation Timeline</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Phase 1: Foundation (Months 1-3)</h4>
+                            <p>Secure funding, acquire NVIDIA DGX Spark hardware, develop customer onboarding, launch to
+                                existing community. Target: 10 pilot customers.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Phase 2: Growth (Months 4-6)</h4>
+                            <p>Refine services based on feedback, expand marketing beyond TikTok community, develop case
+                                studies. Target: 35 total customers.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Phase 3: Scale (Months 7-9)</h4>
+                            <p>Achieve 90-customer milestone, prepare for additional hardware, begin hiring T.A.T.T.O.O.
+                                graduates. Target: $45K MRR.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Phase 4: Expansion (Months 10-12)</h4>
+                            <p>Geographic expansion, additional service lines, team building, prepare for Series A
+                                funding.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Community Impact</h2>
+                    <div class="highlight-box">
+                        <h4>Partnership with T.A.T.T.O.O. Foundation</h4>
+                        <p>We partner with T.A.T.T.O.O. Foundation to provide job opportunities for graduates of their
+                            "Shifting Gears" program—truckers transitioning out of driving due to age, health, or
+                            industry
+                            changes. As we scale our AI system deployments, we create tech career pathways for displaced
+                            drivers while democratizing AI for the community we serve.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Why We Can Save Small Trucking</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="number">10</span>
+                            <span class="label">Years Trucking Experience</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="number">11.5K</span>
+                            <span class="label">Trucker Community Followers</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="number">100%</span>
+                            <span class="label">FMCSA Compliance Focus</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="number">$5.85M</span>
+                            <span class="label">Year 1 Revenue Target</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <div class="container">
+                <h2>The Clock Is Ticking</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Small trucking companies have 18 months before the AI
+                    advantage becomes insurmountable. Don't let cloud platforms turn your data into your competitors'
+                    weapons. Own your AI infrastructure completely.</p>
+                <a href="#contact" class="cta-button">Reserve Your System</a>
+                <a href="#community" class="cta-button">Join the Resistance</a>
+            </div>
+        </div>
+    </body>
+
+    </html>
+
+</body>
+
+</html>
